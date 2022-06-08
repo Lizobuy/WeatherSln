@@ -18,9 +18,13 @@ namespace Weather
         {
             InitializeComponent();
         }
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            await GetWeatherData();
+        }
 
-
-        private async void GetWeatherData()
+        private async Task GetWeatherData()
         {
             var data = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
             if (data != PermissionStatus.Granted)
@@ -36,6 +40,7 @@ namespace Weather
             client.DefaultRequestHeaders.Add("Accept", "application/json");
             var response = await client.GetStringAsync("https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=61baddf70109e767dc03934d5aa825e6");
             var weatherData = JsonConvert.DeserializeObject<OpenWeatherData>(response);
+            BindingContext = weatherData;
         }
 }   }
      

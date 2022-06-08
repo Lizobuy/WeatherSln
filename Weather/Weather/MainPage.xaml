@@ -4,9 +4,18 @@
              x:Class="Weather.MainPage" BackgroundImageSource="Background.jpe">
 
     <StackLayout>
-
-        <Label/>
-        <Label/>
+        <Grid>
+        <Label Text="{Binding main.temp}"
+               HorizontalOptions="CenterAndExpand"/>
+            <Label Text="{Binding main.humidity}"
+               HorizontalOptions="CenterAndExpand"/>
+            <Label Text="{Binding main.pressure}"
+               HorizontalOptions="CenterAndExpand"/>
+            <Label Text="{Binding clouds.all}"
+               HorizontalOptions="CenterAndExpand"/>
+            <Label Text="{Binding speed.wind}"
+               HorizontalOptions="CenterAndExpand"/>
+        </Grid>
     </StackLayout>
 
 </ContentPage>
