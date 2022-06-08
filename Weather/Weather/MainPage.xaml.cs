@@ -23,7 +23,7 @@ namespace Weather
             base.OnAppearing();
             await GetWeatherData();
         }
-
+         
         private async Task GetWeatherData()
         {
             var data = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
@@ -38,7 +38,7 @@ namespace Weather
 
             var client = new HttpClient();
             client.DefaultRequestHeaders.Add("Accept", "application/json");
-            var response = await client.GetStringAsync("https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=61baddf70109e767dc03934d5aa825e6");
+            var response = await client.GetStringAsync("https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&units=metric&&appid=61baddf70109e767dc03934d5aa825e6");
             var weatherData = JsonConvert.DeserializeObject<OpenWeatherData>(response);
             BindingContext = weatherData;
         }
