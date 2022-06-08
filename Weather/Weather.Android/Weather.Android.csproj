@@ -101,5 +101,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\BG2.jfif" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\BG4.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
