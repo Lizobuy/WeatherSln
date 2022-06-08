@@ -1,21 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Weather.MainPage" BackgroundImageSource="Background.jpe">
+             x:Class="Weather.MainPage">
 
     <StackLayout>
-        <StackLayout>
         <Label Text="{Binding main.temp}"
-               HorizontalOptions="CenterAndExpand"/>
-            <Label Text="{Binding main.humidity}"
-               HorizontalOptions="CenterAndExpand"/>
-            <Label Text="{Binding main.pressure}"
-               HorizontalOptions="CenterAndExpand"/>
-            <Label Text="{Binding clouds.all}"
-               HorizontalOptions="CenterAndExpand"/>
-            <Label Text="{Binding wind.speed}"
-               HorizontalOptions="CenterAndExpand"/>
-        </StackLayout>
-    </StackLayout>
+               HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="60"/>
+        
 
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+    
+    <Grid Grid.Row="1" HeightRequest="160" ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid BackgroundColor="#758ABA" Opacity="0.4" >
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label Text="{Binding main.humidity}" FontSize="20"/>
+                </StackLayout> 
+            </Grid>
+            <Grid BackgroundColor="#758ABA" Opacity="0.6" Grid.Column="1">
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="{Binding main.pressure}" FontSize="20"/>
+                </StackLayout>
+            </Grid>
+            <Grid BackgroundColor="#758ABA" Opacity="0.8" Grid.Column="2">
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label Text="{Binding clouds.all}" FontSize="20"/>
+                </StackLayout>
+            </Grid>
+            <Grid BackgroundColor="#758ABA" Grid.Column="3">
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label Text="{Binding wind.speed}" FontSize="20"/>
+                </StackLayout>
+            </Grid>
+
+        </Grid>
+        </Grid>
+        </StackLayout>
 </ContentPage>
