@@ -26,25 +26,25 @@
             </Grid.ColumnDefinitions>
             <Grid BackgroundColor="DimGray" Opacity="0.4" >
                 <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                        <Label Text="{Binding main.humidity}" TextColor="White"  FontSize="20"/>
+                        <Label Text="{Binding main.humidity, StringFormat='{0:N0}%'}" TextColor="White"  FontSize="20"/>
                         <Label Text="Humidity"  TextColor="White" FontSize="15"/>
                     </StackLayout> 
             </Grid>
                 <Grid BackgroundColor="Gray" Opacity="0.6" Grid.Column="1">
                 <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                        <Label Text="{Binding main.pressure}" TextColor="White"  FontSize="20"/>
+                        <Label Text="{Binding main.pressure, StringFormat='{0:N0}Pa'}" TextColor="White"  FontSize="20"/>
                         <Label Text="Pressure" TextColor="White"  FontSize="15"/>
                     </StackLayout>
             </Grid>
                 <Grid BackgroundColor="Gray" Opacity="0.8" Grid.Column="2">
                 <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                        <Label Text="{Binding clouds.all}" TextColor="White"  FontSize="20"/>
+                        <Label Text="{Binding clouds.all, StringFormat='{0:N0}'}" TextColor="White"  FontSize="20"/>
                         <Label Text="Clouds" TextColor="White"  FontSize="15"/>
                     </StackLayout>
             </Grid>
                 <Grid BackgroundColor="Gray" Grid.Column="3">
                 <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                        <Label Text="{Binding wind.speed}"  FontSize="20" TextColor="White" />
+                        <Label Text="{Binding wind.speed, StringFormat='{0:N0}km/h'}"  FontSize="20" TextColor="White" />
                         <Label Text="Wind Speed" TextColor="White"  FontSize="15"/>
                     </StackLayout>
             </Grid>
