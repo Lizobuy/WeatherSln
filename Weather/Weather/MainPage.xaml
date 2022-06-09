@@ -4,9 +4,9 @@
              x:Class="Weather.MainPage" BackgroundImageSource="BG4.jpg">
 
     <StackLayout>
-        <Label Text="Temperature"  FontSize="30" TextColor="White" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Label Text="Temperature"  FontSize="30" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
         <Label Text="{Binding main.temp}"
-               HorizontalOptions="Center" TextColor="White" VerticalOptions="CenterAndExpand" FontSize="60"/>
+               HorizontalOptions="Center" TextColor="White" VerticalOptions="Center" FontSize="60"/>
         
 
         <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0">
