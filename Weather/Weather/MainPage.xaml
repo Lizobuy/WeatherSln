@@ -5,7 +5,7 @@
 
     <StackLayout>
         <Label Text="Temperature"  FontSize="30" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
-        <Label Text="{Binding main.temp}"
+        <Label Text="{Binding main.temp, StringFormat='{0:N0}°'}"
                HorizontalOptions="Center" TextColor="White" VerticalOptions="Center" FontSize="60"/>
         
 
