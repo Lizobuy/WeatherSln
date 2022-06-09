@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="Weather.MainPage" BackgroundImageSource="BG4.jpg">
 
     <StackLayout>
         <Label Text="Temperature"  FontSize="30" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
-        <Label Text="{Binding main.temp, StringFormat='{0:N0}°'}"
+                <Label Text="{Binding main.temp, StringFormat='{0:N0}°'}"
                HorizontalOptions="Center" TextColor="White" VerticalOptions="Center" FontSize="60"/>
+        <Label  Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{HH:MM:MMMM dd, yyyy}'}" TextColor="White" FontSize="20" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
         
 
         <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0">

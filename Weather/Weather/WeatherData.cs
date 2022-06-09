@@ -18,6 +18,7 @@ namespace WeatherApp
 
     public class Main
     {
+      
         public double temp { get; set; }
         public double feels_like { get; set; }
         public double temp_min { get; set; }
@@ -45,6 +46,7 @@ namespace WeatherApp
 
     public class Sys
     {
+        
         public int type { get; set; }
         public int id { get; set; }
         public string country { get; set; }
